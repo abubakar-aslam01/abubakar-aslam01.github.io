@@ -1,0 +1,146 @@
+:root {
+  --main-bg: #eef6f9;
+  --primary-color: #010a4f;
+  --border-color: #00123f;
+  --highlight-bg: #ddeeff;
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --transition-time: 0.4s;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: var(--main-bg);
+  color: black;
+  margin: 30px;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 28px;
+  background-color: var(--highlight-bg);
+  padding: 10px;
+  border-left: 4px solid var(--border-color);
+  border-radius: 4px;
+}
+
+h2,
+h3 {
+  color: var(--primary-color);
+  background-color: var(--highlight-bg);
+  padding: 8px;
+  border-left: 4px solid var(--border-color);
+  border-radius: 4px;
+  text-align: left;
+}
+
+p {
+  font-size: 15px;
+  margin: 10px 0;
+}
+
+ul {
+  background-color: #f5f5f5;
+  padding: 12px 20px;
+  border-radius: 6px;
+}
+
+li {
+  font-weight: bold;
+  margin: 5px 0;
+  color: black;
+}
+
+hr {
+  border: 1px dashed var(--border-color);
+  margin: 20px 0;
+}
+
+/* ---------- Links ---------- */
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color var(--transition-time) ease;
+}
+
+a:hover {
+  color: #0336b5;
+  text-decoration: underline;
+}
+
+div {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  border: 1px solid #d4d4d4;
+}
+
+div:first-of-type {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+div:first-of-type img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid var(--border-color);
+  object-fit: cover;
+  transition: border-radius var(--transition-time) ease,
+    transform var(--transition-time) ease;
+}
+
+div:first-of-type img:hover {
+  border-radius: 10px;
+  transform: scale(1.08);
+}
+
+div:last-of-type {
+  text-align: left;
+}
+
+div:last-of-type .image-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+div:last-of-type img {
+  width: 220px;
+  height: 160px;
+  border: 3px solid var(--border-color);
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform var(--transition-time) ease,
+    box-shadow var(--transition-time) ease;
+}
+
+div:last-of-type img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+th,
+td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #010a4f;
+  color: white;
+}
