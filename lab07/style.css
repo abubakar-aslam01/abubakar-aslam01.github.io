@@ -1,96 +1,144 @@
+:root {
+  --main-bg: #f4f7fb;
+  --primary-color: #0d2040;
+  --border-color: #001a4f;
+  --highlight-bg: #e7eff9;
+  --card-bg: #ffffff;
+  --soft-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --hover-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  --transition: 0.3s ease;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-}
- 
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--main-bg);
+  color: #333;
+} 
+
 header {
-  background-color: #002b5b;
+  background-color: var(--primary-color);
   color: white;
+  padding: 25px;
   text-align: center;
-  padding: 20px;
-  position: sticky;
-  top: 0;
+  box-shadow: var(--soft-shadow);
+  
+  
 }
  
 .container {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 15px;
-  padding: 15px;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+  padding: 20px;
 }
  
 .sidebar {
   background-color: white;
-  padding: 15px;
-  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: var(--soft-shadow);
+  position: sticky;
+  top: 20px;
+  height: fit-content;
 }
 
 .sidebar ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .sidebar li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .sidebar a {
   text-decoration: none;
-  color: #002b5b;
+  color: var(--primary-color);
   font-weight: bold;
+  transition: color var(--transition);
+}
+
+.sidebar a:hover {
+  color: #335dc0;
 }
  
 main section {
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-bottom: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: var(--soft-shadow);
+  margin-bottom: 20px;
 }
 
 h2 {
-  color: #002b5b;
-  border-bottom: 2px solid #002b5b;
-  padding-bottom: 5px;
+  color: var(--primary-color);
+  background-color: var(--highlight-bg);
+  border-left: 4px solid var(--border-color);
+  padding: 8px;
+  border-radius: 4px;
 }
  
 .intro-box {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .intro-box img {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
-  border: 2px solid #002b5b;
+  border: 3px solid var(--border-color);
   object-fit: cover;
+  transition: transform var(--transition);
+}
+
+.intro-box img:hover {
+  transform: scale(1.08);
 }
  
 .skills-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 20px;
+  justify-content: center;
 }
 
 .skill-card {
-  width: 200px;
-  border: 1px solid #ccc;
+  width: 240px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 10px;
+  padding: 20px 15px;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--soft-shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--hover-shadow);
+  background-color: #f7faff;
 }
 
 .skill-icon {
-  width: 70px;
-  height: 70px;
-  background-color: #002b5b;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 10px;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
   border-radius: 50%;
+  background-color: var(--primary-color);
+  border: 3px solid #6c7ae0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  font-size: 22px;
 }
  
 table {
@@ -100,31 +148,38 @@ table {
 
 th,
 td {
-  border: 1px solid #999;
-  padding: 8px;
-  text-align: left;
+  border: 1px solid #ddd;
+  padding: 10px;
 }
 
 th {
-  background-color: #002b5b;
+  background-color: var(--primary-color);
   color: white;
 }
  
 .image-row {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
   flex-wrap: wrap;
-  gap: 10px;
+  margin-top: 15px;
 }
 
 .image-row img {
-  width: 200px;
-  height: 150px;
-  border: 2px solid #002b5b;
-  border-radius: 5px;
+  width: 220px;
+  height: 160px;
+  border-radius: 10px;
+  border: 3px solid var(--border-color);
   object-fit: cover;
+  transition: transform var(--transition);
+}
+
+.image-row img:hover {
+  transform: scale(1.05);
 }
  
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .container {
     grid-template-columns: 1fr;
   }
@@ -132,6 +187,11 @@ th {
   .intro-box {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
   }
 
   .skills-container {
