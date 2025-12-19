@@ -1,0 +1,17 @@
+[
+  {
+    "review_id": "SREV001",
+    "reviewer_name": "Jamie L.",
+    "review_content": "The Dell XPS 13 is perfect! The battery life is phenomenal for all-day coding, and the display is gorgeous for media. The only minor drawback is the lack of traditional USB-A ports, but a dongle solves that easily. Highly recommend for professionals."
+  },
+  {
+    "review_id": "SREV002",
+    "reviewer_name": "Chris B.",
+    "review_content": "I love the new MacBook Air with the M2 chip. It's completely silent, incredibly thin, and handles my light photo editing tasks without a sweat. Best keyboard I've ever used on a laptop. A flawless experience for a student or casual user."
+  },
+  {
+    "review_id": "SREV003",
+    "reviewer_name": "Taylor M.",
+    "review_content": "Got the HP OMEN gaming laptop, and it's a beast! Runs all the newest AAA games at high settings with a silky-smooth frame rate. It does get quite hot and the fans are loud under heavy load, but that's expected for this level of performance. Great value for a gaming machine."
+  }
+]
